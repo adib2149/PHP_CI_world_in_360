@@ -5,12 +5,12 @@ class Homepage extends CI_Controller {
 	public function index()
 	{
 		$result = $this->_getData();
-		$data['data'] = json_decode($result);
+		$data['data'] = json_decode($result, true);
 		$this->load->view('view_homepage', $data);
 	}
 
 	public function _getData() {
-		$url = 'https://world-in-360.firebaseio.com/image.json';
+		$url = 'https://world-in-360.firebaseio.com/imagename.json';
 
         // Open connection
         $ch = curl_init();

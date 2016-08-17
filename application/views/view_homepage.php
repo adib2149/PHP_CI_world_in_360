@@ -7,6 +7,11 @@
   <meta name="description" content="World in 360: Been Here - Done That - Captured That">
   <meta name="author" content="Riddhiman Adib">
 
+  <meta property="og:title" content="World in 360 : Riddhiman Adib">
+  <!--meta property="og:image" content="http://example.com/images/photo.jpg"-->
+  <meta property="og:description" content="World in 360: Been Here - Done That - Captured That">
+  <meta property="og:url" content="">
+
   <title>World in 360</title>
 
   <!-- Loading Bootstrap -->
@@ -40,11 +45,7 @@
   <div class="centre-aligned-text">
     <h1>World in 360</h1>
     <h6>Been Here - Done That - Captured That</h6>
-    <p id="desc">I have always had that knack for some clicks, not of us, not of people around us, but where I was, where we were. The time, that very moment in which we were, we existed, we lived. Here's a collection of that very special moments.</p>
-
-
-
-    <h3><?php var_dump($data); ?></h3>
+    <p class="desc">I have always had that knack for some clicks, not of us, not of people around us, but where I was, where we were. The time, that very moment in which we were, we existed, we lived. Here's a collection of that very special moments.</p>
   </div>
   <!-- /.container -->
 
@@ -53,20 +54,17 @@
 
   <!-- Sharing Links -->
   <main role="main" id="main">
-    <div class="examples">
-      
-      <span class="button-addon">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%2fworld_in_360%2f" target="_blank" class="button button-facebook" data-shr-network="facebook">
+    <div class="examples">      
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%2fworld_in_360%2f" target="_blank" class="button button-facebook" data-shr-network="facebook">
           <svg><use xlink:href="#shr-facebook"></use></svg>Share
-        </a>
-      </span>
+      </a>
 
       <a href="https://twitter.com/intent/tweet?text=Simple+sharing+buttons+for+social+networks.&amp;url=http%3a%2f%2flocalhost%2fworld_in_360%2f&amp;via=sam_potts" target="_blank" class="button button-twitter" data-shr-network="twitter">
         <svg><use xlink:href="#shr-twitter"></use></svg>Tweet
       </a>
 
       <a href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%2fworld_in_360%2f" target="_blank" class="button button-google" data-shr-network="google">
-        <svg><use xlink:href="#shr-google"></use></svg>+1
+        <svg><use xlink:href="#shr-google"></use></svg>     +1
       </a>
     </div>
   </main>
@@ -77,22 +75,32 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://2.bp.blogspot.com/-H6MAoWN-UIE/TuRwLbHRSWI/AAAAAAAABBk/89iiEulVsyg/s400/Free%2BNature%2BPhoto.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://th03.deviantart.net/fs70/200H/f/2010/256/0/9/painting_of_nature_by_dhikagraph-d2ynalq.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://th03.deviantart.net/fs70/200H/f/2010/256/0/9/painting_of_nature_by_dhikagraph-d2ynalq.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://2.bp.blogspot.com/-H6MAoWN-UIE/TuRwLbHRSWI/AAAAAAAABBk/89iiEulVsyg/s400/Free%2BNature%2BPhoto.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="http://blog.arborday.org/wp-content/uploads/2013/02/NEC1-300x200.jpg" /></div>
+
+      <?php 
+        for ($x = 0; $x < count($data); $x++) { 
+      ?>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+              <a href="index.php/panorama/<?= $x ?>" target="_blank">
+                <span style=""><?= $data[$x]['title'] ?></span>
+                <img class="img-responsive" src="assets/img/panorama/thumb/<?= $data[$x]['name'] ?>.jpg" />
+              </a>
+            </div>
+      <?
+        } 
+      ?> 
+
     </div>
   </div>
 
 
 
-  <div class="footer-bottom">
+  <div class="footer-bottom" id="custom_footer">
         <div class="container">
-            <p class="pull-left"> Copyright © Riddhiman Adib 2016. All right reserved. </p>
+            <div style="font-size: 14px; text-align: justify;"><i>These image are not taken professionally, rather taken with amateur hands. Only tool used was a Google Nexus 5X. All the images are property of Riddhiman Adib, and they should not be used in any kind of work, personal or commercial, without consent.</i></div>
+
+            <br>
+
+            <p class="pull-right"> Copyright © <a href='https://riddhimanadib.wordpress.com/about/' target='_blank'>Riddhiman Adib</a> 2016. All right reserved. </p>
         </div>
   </div>
 
