@@ -51,28 +51,6 @@
 
 
 
-
-  <!-- Sharing Links -->
-  <main role="main" id="main">
-    <div class="examples">      
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://world-in-360.herokuapp.com/" target="_blank" class="button button-facebook" data-shr-network="facebook">
-          <svg><use xlink:href="#shr-facebook"></use></svg>Share
-      </a>
-
-      <a href="https://twitter.com/intent/tweet?text=World in 360 : Riddhiman Adib.&amp;url=https://world-in-360.herokuapp.com&amp;via=sam_potts" target="_blank" class="button button-twitter" data-shr-network="twitter">
-        <svg><use xlink:href="#shr-twitter"></use></svg>Tweet
-      </a>
-
-      <a href="https://plus.google.com/share?url=https://world-in-360.herokuapp.com/" target="_blank" class="button button-google" data-shr-network="google">
-        <svg><use xlink:href="#shr-google"></use></svg>     +1
-      </a>
-    </div>
-  </main>
-
-
-
-
-
   <div class="container">
     <div class="row">
 
@@ -91,6 +69,24 @@
 
     </div>
   </div>
+  
+  
+  <!-- Sharing Links -->
+  <main role="main" id="main">
+    <div class="examples">      
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://world-in-360.herokuapp.com/" target="_blank" class="button button-facebook" data-shr-network="facebook">
+          <svg><use xlink:href="#shr-facebook"></use></svg>Share
+      </a>
+
+      <a href="https://twitter.com/intent/tweet?text=World in 360 : Riddhiman Adib.&amp;url=https://world-in-360.herokuapp.com&amp;via=sam_potts" target="_blank" class="button button-twitter" data-shr-network="twitter">
+        <svg><use xlink:href="#shr-twitter"></use></svg>Tweet
+      </a>
+
+      <a href="https://plus.google.com/share?url=https://world-in-360.herokuapp.com/" target="_blank" class="button button-google" data-shr-network="google">
+        <svg><use xlink:href="#shr-google"></use></svg>     +1
+      </a>
+    </div>
+  </main>
 
 
 
