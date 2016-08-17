@@ -51,7 +51,7 @@
 
 
 
-  <div class="container" style="margin-top: 30px; margin-bottom: 0px;">
+  <div class="container" style="margin-top: 80px; margin-bottom: 0px;">
     <div class="row">
 
       <?php 
