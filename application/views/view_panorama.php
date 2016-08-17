@@ -13,7 +13,7 @@
   		<meta property="og:title" content="World in 360 : Riddhiman Adib">
 		<!--meta property="og:image" content="http://example.com/images/photo.jpg"-->
 		<meta property="og:description" content="World in 360: Been Here - Done That - Captured That">
-		<meta property="og:url" content="">
+		<meta property="og:url" content="https://world-in-360.herokuapp.com">
 
 		<!-- Loading Bootstrap -->
   		<link href="<?= base_url() ?>assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
 
 		<div id="container"></div>
 		<div id="info">
-			<div style="font-size:16px;"><?= $data['title']?><a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%2fworld_in_360%2f"><img id="fb-share" src="<?= base_url()?>assets/img/facebook-share.gif"></a></div>
+			<div style="font-size:16px;"><?= $data['title']?><a href="https://www.facebook.com/sharer/sharer.php?u=https://world-in-360.herokuapp.com"><img id="fb-share" src="<?= base_url()?>assets/img/facebook-share.gif"></a></div>
 			<div style="font-size:14px;"><?= $data['desc'] ?></div>
 			<div style="font-size:14px;"><i>Use Mouse to drag and view - Press F11 for full-screen experience<i>
 		</div>

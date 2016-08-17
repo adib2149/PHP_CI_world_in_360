@@ -10,7 +10,7 @@
   <meta property="og:title" content="World in 360 : Riddhiman Adib">
   <!--meta property="og:image" content="http://example.com/images/photo.jpg"-->
   <meta property="og:description" content="World in 360: Been Here - Done That - Captured That">
-  <meta property="og:url" content="">
+  <meta property="og:url" content="https://world-in-360.herokuapp.com/">
 
   <title>World in 360</title>
 
@@ -55,15 +55,15 @@
   <!-- Sharing Links -->
   <main role="main" id="main">
     <div class="examples">      
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%2fworld_in_360%2f" target="_blank" class="button button-facebook" data-shr-network="facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://world-in-360.herokuapp.com/" target="_blank" class="button button-facebook" data-shr-network="facebook">
           <svg><use xlink:href="#shr-facebook"></use></svg>Share
       </a>
 
-      <a href="https://twitter.com/intent/tweet?text=Simple+sharing+buttons+for+social+networks.&amp;url=http%3a%2f%2flocalhost%2fworld_in_360%2f&amp;via=sam_potts" target="_blank" class="button button-twitter" data-shr-network="twitter">
+      <a href="https://twitter.com/intent/tweet?text=https://world-in-360.herokuapp.com/.&amp;url=http%3a%2f%2flocalhost%2fworld_in_360%2f&amp;via=sam_potts" target="_blank" class="button button-twitter" data-shr-network="twitter">
         <svg><use xlink:href="#shr-twitter"></use></svg>Tweet
       </a>
 
-      <a href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%2fworld_in_360%2f" target="_blank" class="button button-google" data-shr-network="google">
+      <a href="https://plus.google.com/share?url=https://world-in-360.herokuapp.com/" target="_blank" class="button button-google" data-shr-network="google">
         <svg><use xlink:href="#shr-google"></use></svg>     +1
       </a>
     </div>
