@@ -16,11 +16,11 @@
 		<meta property="og:url" content="https://world-in-360.herokuapp.com">
 
 		<!-- Loading Bootstrap -->
-  		<link href="<?= base_url() ?>assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  		<link href="https://world-in-360.herokuapp.com/assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   		<!-- Loading Flat UI -->
-		<link href="<?= base_url() ?>assets/css/flat-ui.min.css" rel="stylesheet">
+		<link href="https://world-in-360.herokuapp.com/assets/css/flat-ui.min.css" rel="stylesheet">
 		<!-- Custom CSS -->
-		<link href="<?= base_url()?>assets/css/riddhi-custom.css" rel="stylesheet">
+		<link href="https://world-in-360.herokuapp.com/assets/css/riddhi-custom.css" rel="stylesheet">
 		<!-- Custom FONT -->
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<!-- Custom ICON -->
@@ -33,12 +33,12 @@
 
 		<div id="container"></div>
 		<div id="info">
-			<div style="font-size:16px;"><?= $data['title']?><a href="https://www.facebook.com/sharer/sharer.php?u=https://world-in-360.herokuapp.com"><img id="fb-share" src="<?= base_url()?>assets/img/facebook-share.gif"></a></div>
+			<div style="font-size:16px;"><?= $data['title']?><a href="https://www.facebook.com/sharer/sharer.php?u=https://world-in-360.herokuapp.com"><img id="fb-share" src="https://world-in-360.herokuapp.com/assets/img/facebook-share.gif"></a></div>
 			<div style="font-size:14px;"><?= $data['desc'] ?></div>
 			<div style="font-size:14px;"><i>Use Mouse to drag and view - Press F11 for full-screen experience<i>
 		</div>
 
-		<script src="<?= base_url() ?>assets/js/three.min.js"></script>
+		<script src="https://world-in-360.herokuapp.com/assets/js/three.min.js"></script>
 
 		<script>
 
@@ -68,7 +68,7 @@
 				geometry.scale( - 1, 1, 1 );
 
 				var material = new THREE.MeshBasicMaterial( {
-					map: new THREE.TextureLoader().load( '<?= base_url() ?>assets/img/panorama/main/<?= $data['name'] ?>.jpg' )
+					map: new THREE.TextureLoader().load( 'https://world-in-360.herokuapp.com/assets/img/panorama/main/<?= $data['name'] ?>.jpg' )
 				} );
 
 				mesh = new THREE.Mesh( geometry, material );
