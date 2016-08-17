@@ -15,7 +15,7 @@
   <title>World in 360</title>
 
   <!-- Loading Bootstrap -->
-  <link href="<?= base_url() ?>assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://world-in-360.herokuapp.com/assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- START -->
   <!-- SHARE Styles -->
@@ -25,10 +25,10 @@
   <!-- END -->
 
   <!-- Loading Flat UI -->
-  <link href="<?= base_url() ?>assets/css/flat-ui.min.css" rel="stylesheet">
+  <link href="https://world-in-360.herokuapp.com/assets/css/flat-ui.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="<?= base_url()?>assets/css/riddhi-custom.css" rel="stylesheet">
+  <link href="https://world-in-360.herokuapp.com/assets/css/riddhi-custom.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
@@ -59,7 +59,7 @@
           <svg><use xlink:href="#shr-facebook"></use></svg>Share
       </a>
 
-      <a href="https://twitter.com/intent/tweet?text=https://world-in-360.herokuapp.com/.&amp;url=http%3a%2f%2flocalhost%2fworld_in_360%2f&amp;via=sam_potts" target="_blank" class="button button-twitter" data-shr-network="twitter">
+      <a href="https://twitter.com/intent/tweet?text=World in 360 : Riddhiman Adib.&amp;url=https://world-in-360.herokuapp.com&amp;via=sam_potts" target="_blank" class="button button-twitter" data-shr-network="twitter">
         <svg><use xlink:href="#shr-twitter"></use></svg>Tweet
       </a>
 
@@ -145,10 +145,10 @@
 
 
         <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
-        <script src="<?= base_url() ?>assets/js/vendor/jquery.min.js"></script>
+        <script src="https://world-in-360.herokuapp.com/assets/js/vendor/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="<?= base_url() ?>assets/js/vendor/video.js"></script>
-        <script src="<?= base_url() ?>assets/js/flat-ui.min.js"></script>
+        <script src="https://world-in-360.herokuapp.com/assets/js/vendor/video.js"></script>
+        <script src="https://world-in-360.herokuapp.com/assets/js/flat-ui.min.js"></script>
       </body>
 
       </html>
