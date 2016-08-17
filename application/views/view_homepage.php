@@ -73,7 +73,7 @@
   
   <!-- Sharing Links -->
   <main role="main" id="main">
-    <div class="examples">      
+    <div class="examples" style="margin-top: 20px; margin-bottom: 0px;">      
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://world-in-360.herokuapp.com/" target="_blank" class="button button-facebook" data-shr-network="facebook">
           <svg><use xlink:href="#shr-facebook"></use></svg>Share
       </a>
