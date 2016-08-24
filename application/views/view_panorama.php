@@ -26,6 +26,9 @@
 		<!-- Custom ICON -->
 		<link rel="shortcut icon" href="img/favicon.ico">
 
+		<!-- For Progress Bar -->
+    	<link href="https://world-in-360.herokuapp.com/assets/css/progressjs.css" rel="stylesheet">
+
 	</head>
 
 
@@ -40,10 +43,13 @@
 
 		<script src="https://world-in-360.herokuapp.com/assets/js/three.min.js"></script>
 
+		<script src="https://world-in-360.herokuapp.com/assets/js/progress.min.js"></script>
+
 		<script>
 
 			var camera, scene, renderer;
 			var container, mesh, material, geometry;
+			var progressValue;
 
 			var isUserInteracting = false,
 			onMouseDownMouseX = 0, onMouseDownMouseY = 0,
@@ -66,6 +72,8 @@
 				geometry = new THREE.SphereGeometry( 500, 60, 40 );
 				geometry.scale( - 1, 1, 1 );
 
+				progressJs().start();
+
 				material = new THREE.MeshBasicMaterial( {
 					map: new THREE.TextureLoader().load( 'https://world-in-360.herokuapp.com/assets/img/panorama/main/<?= $data['name'] ?>.jpg', onLoadCompleted, onLoadProgress, onFailed )
 				});
@@ -74,17 +82,21 @@
 
 			function onLoadCompleted( texture ) {
 				// do something with the texture
+				progressJs().end();
 				showImage();
 			}
 
 			// Function called when download progresses
 			function onLoadProgress( xhr ) {
-				console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+				// console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+				progressValue = Math.round( (xhr.loaded / xhr.total * 100) );
+				progressJs().set(progressValue);
 			}
 
 			// Function called when download errors
 			function onFailed( xhr ) {
-				console.log( 'An error happened' );
+				// console.log( 'An error happened' );
+				progressJs().end();
 			}
 
 			function showImage() {
