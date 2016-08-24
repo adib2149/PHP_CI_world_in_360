@@ -27,7 +27,7 @@
 		<link rel="shortcut icon" href="img/favicon.ico">
 
 		<!-- For Progress Bar -->
-    	<link href="https://world-in-360.herokuapp.com/assets/css/progressjs.css" rel="stylesheet">
+    	<link href="https://world-in-360.herokuapp.com/assets/css/progressjs.min.css" rel="stylesheet">
 
 	</head>
 
