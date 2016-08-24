@@ -33,7 +33,7 @@
 
 		<div id="container"></div>
 		<div id="info">
-			<div style="font-size:16px;"><?= $data['title']?><a href="https://www.facebook.com/sharer/sharer.php?u=https://world-in-360.herokuapp.com"><img id="fb-share" src="https://world-in-360.herokuapp.com/assets/img/facebook-share.gif"></a></div>
+			<div style="font-size:16px;"><?= $data['title']?></div>
 			<div style="font-size:14px;"><?= $data['desc'] ?></div>
 			<div style="font-size:14px;"><i>Use Mouse to drag and view - Press F11 for full-screen experience<i>
 		</div>
@@ -43,6 +43,7 @@
 		<script>
 
 			var camera, scene, renderer;
+			var container, mesh, material, geometry;
 
 			var isUserInteracting = false,
 			onMouseDownMouseX = 0, onMouseDownMouseY = 0,
@@ -55,8 +56,6 @@
 
 			function init() {
 
-				var container, mesh;
-
 				container = document.getElementById( 'container' );
 
 				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
@@ -64,12 +63,31 @@
 
 				scene = new THREE.Scene();
 
-				var geometry = new THREE.SphereGeometry( 500, 60, 40 );
+				geometry = new THREE.SphereGeometry( 500, 60, 40 );
 				geometry.scale( - 1, 1, 1 );
 
-				var material = new THREE.MeshBasicMaterial( {
-					map: new THREE.TextureLoader().load( 'https://world-in-360.herokuapp.com/assets/img/panorama/main/<?= $data['name'] ?>.jpg' )
-				} );
+				material = new THREE.MeshBasicMaterial( {
+					map: new THREE.TextureLoader().load( 'https://world-in-360.herokuapp.com/assets/img/panorama/main/<?= $data['name'] ?>.jpg', onLoadCompleted, onLoadProgress, onFailed )
+				});
+
+			}
+
+			function onLoadCompleted( texture ) {
+				// do something with the texture
+				showImage();
+			}
+
+			// Function called when download progresses
+			function onLoadProgress( xhr ) {
+				console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+			}
+
+			// Function called when download errors
+			function onFailed( xhr ) {
+				console.log( 'An error happened' );
+			}
+
+			function showImage() {
 
 				mesh = new THREE.Mesh( geometry, material );
 
@@ -127,7 +145,6 @@
 				//
 
 				window.addEventListener( 'resize', onWindowResize, false );
-
 			}
 
 			function onWindowResize() {
