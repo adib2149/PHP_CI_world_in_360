@@ -24,7 +24,7 @@
 		<!-- Custom FONT -->
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<!-- Custom ICON -->
-		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="shortcut icon" href="https://world-in-360.herokuapp.com/assets/img/color-palette.ico">
 
 	</head>
 

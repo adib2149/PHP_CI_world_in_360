@@ -32,7 +32,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
-  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="shortcut icon" href="https://world-in-360.herokuapp.com/assets/img/color-palette.ico">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 <!--[if lt IE 9]>
