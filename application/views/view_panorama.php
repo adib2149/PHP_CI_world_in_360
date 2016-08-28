@@ -23,6 +23,8 @@
 		<link href="https://world-in-360.herokuapp.com/assets/css/riddhi-custom.css" rel="stylesheet">
 		<!-- Custom FONT -->
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+		<!-- Custom CSS for progress -->
+		<link href="https://world-in-360.herokuapp.com/assets/css/progressjs.min.css" rel="stylesheet">
 		<!-- Custom ICON -->
 		<link rel="shortcut icon" href="https://world-in-360.herokuapp.com/assets/img/color-palette.ico">
 
@@ -37,15 +39,16 @@
 			<div style="font-size:14px;"><?= $data['desc'] ?></div>
 			<div style="font-size:14px;"><i>Use Mouse to drag and view - Press F11 for full-screen experience</i></div>
 
-			<div id="progressBox">
+			<!--div id="progressBox">
 			  <div id="progressLevel">
 			    <div id="progressLabel">0%</div>
 			  </div>
-			</div>
+			</div-->
 
 		</div>
 
 		<script src="https://world-in-360.herokuapp.com/assets/js/three.min.js"></script>
+		<script src="https://world-in-360.herokuapp.com/assets/js/progress.min.js"></script>
 
 		<script>
 
@@ -53,6 +56,7 @@
 			var container, mesh, material, geometry;
 			var progressValue;
 			var progressBox, progressLevel;
+			var width = 0;
 
 			var isUserInteracting = false,
 			onMouseDownMouseX = 0, onMouseDownMouseY = 0,
@@ -66,12 +70,14 @@
 			function init() {
 
 				container = document.getElementById( 'container' );
-				progressBox = document.getElementById("progressBox");
-				progressLevel = document.getElementById("progressLevel");
-				progressLabel = document.getElementById("progressLabel");
+				// progressBox = document.getElementById("progressBox");
+				// progressLevel = document.getElementById("progressLevel");
+				// progressLabel = document.getElementById("progressLabel");
 
 				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
 				camera.target = new THREE.Vector3( 0, 0, 0 );
+
+				progressJs().start();
 
 				scene = new THREE.Scene();
 
@@ -86,7 +92,8 @@
 
 			function onLoadCompleted( texture ) {
 				// do something with the texture
-				progressBox.style.visibility = "hidden";
+				// progressBox.style.visibility = "hidden";
+				progressJs().end();
 				showImage();
 			}
 
@@ -94,19 +101,25 @@
 			function onLoadProgress( xhr ) {
 				// console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
 				progressValue = Math.round( (xhr.loaded / xhr.total * 100) );
-				setProgress(progressValue);
+				progressJs().set(progressValue);
+				// setProgress(progressValue);
+				// console.log("outside val: " + progressValue);
 			}
 
 			// Function called when download errors
 			function onFailed( xhr ) {
 				// console.log( 'An error happened' );
-				progressBox.style.visibility = "hidden";
+				// progressBox.style.visibility = "hidden";
+				progressJs().end();
 			}
 
 			function setProgress(value) {
+				console.log("started");
+
 			  if (width <= 100) {
 			    width = value;
-			    elem.style.width = width + '%';
+			    console.log("val: " + value);
+			    progressLevel.style.width = width + '%';
 			    progressLabel.innerHTML = width * 1  + '%';
 			  }
 			}
