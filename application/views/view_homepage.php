@@ -44,8 +44,8 @@
 <body>
   <div class="centre-aligned-text">
     <h1>World in 360</h1>
-    <h6>Been Here - Done That - Captured That</h6>
-    <p class="desc">I have always had that knack for some clicks, not of us, not of people around us, but where I was, where we were. The time, that very moment in which we were, we existed, we lived. Here's a collection of that very special moments.</p>
+    <h6>Tiny Drops of Memory in Panoramic Frame</h6>
+    <p>There's always a background to every image taken, always a sidestory. I've tried to capture those special moments as a whole, so that I can always cherish those just as they were.</p>
   </div>
   <!-- /.container -->
 

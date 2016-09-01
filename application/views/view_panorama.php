@@ -39,6 +39,8 @@
 			<div style="font-size:14px;"><?= $data['desc'] ?></div>
 			<div style="font-size:14px;"><i>Use Mouse to drag and view - Press F11 for full-screen experience</i></div>
 
+			<div id="loadBox" style="height: 660px; width: 500px; background-color:#808080; text-align:center; display: inline-block;"></div>
+
 			<!--div id="progressBox">
 			  <div id="progressLevel">
 			    <div id="progressLabel">0%</div>
@@ -57,6 +59,7 @@
 			var progressValue;
 			var progressBox, progressLevel;
 			var width = 0;
+			var loadBox;
 
 			var isUserInteracting = false,
 			onMouseDownMouseX = 0, onMouseDownMouseY = 0,
@@ -70,6 +73,7 @@
 			function init() {
 
 				container = document.getElementById( 'container' );
+				loadBox = document.getElementById("loadBox");
 				// progressBox = document.getElementById("progressBox");
 				// progressLevel = document.getElementById("progressLevel");
 				// progressLabel = document.getElementById("progressLabel");
@@ -77,7 +81,7 @@
 				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
 				camera.target = new THREE.Vector3( 0, 0, 0 );
 
-				progressJs().start();
+				progressJs("#container").setOptions({overlayMode: true, theme: 'blueOverlayRadiusWithPercentBar'}).start();
 
 				scene = new THREE.Scene();
 
@@ -93,7 +97,7 @@
 			function onLoadCompleted( texture ) {
 				// do something with the texture
 				// progressBox.style.visibility = "hidden";
-				progressJs().end();
+				progressJs("#loadBox").end();
 				showImage();
 			}
 
@@ -101,7 +105,7 @@
 			function onLoadProgress( xhr ) {
 				// console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
 				progressValue = Math.round( (xhr.loaded / xhr.total * 100) );
-				progressJs().set(progressValue);
+				progressJs("#loadBox").set(progressValue);
 				// setProgress(progressValue);
 				// console.log("outside val: " + progressValue);
 			}
@@ -110,7 +114,7 @@
 			function onFailed( xhr ) {
 				// console.log( 'An error happened' );
 				// progressBox.style.visibility = "hidden";
-				progressJs().end();
+				progressJs("#loadBox").end();
 			}
 
 			function setProgress(value) {
