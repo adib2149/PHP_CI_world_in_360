@@ -39,8 +39,6 @@
 			<div style="font-size:14px;"><?= $data['desc'] ?></div>
 			<div style="font-size:14px;"><i>Use Mouse to drag and view - Press F11 for full-screen experience</i></div>
 
-			<div id="loadBox" style="height: 660px; width: 500px; background-color:#808080; text-align:center; display: inline-block;"></div>
-
 			<!--div id="progressBox">
 			  <div id="progressLevel">
 			    <div id="progressLabel">0%</div>
@@ -73,7 +71,6 @@
 			function init() {
 
 				container = document.getElementById( 'container' );
-				loadBox = document.getElementById("loadBox");
 				// progressBox = document.getElementById("progressBox");
 				// progressLevel = document.getElementById("progressLevel");
 				// progressLabel = document.getElementById("progressLabel");
@@ -97,7 +94,7 @@
 			function onLoadCompleted( texture ) {
 				// do something with the texture
 				// progressBox.style.visibility = "hidden";
-				progressJs("#loadBox").end();
+				progressJs().end();
 				showImage();
 			}
 
@@ -105,7 +102,7 @@
 			function onLoadProgress( xhr ) {
 				// console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
 				progressValue = Math.round( (xhr.loaded / xhr.total * 100) );
-				progressJs("#loadBox").set(progressValue);
+				progressJs().set(progressValue);
 				// setProgress(progressValue);
 				// console.log("outside val: " + progressValue);
 			}
@@ -114,18 +111,7 @@
 			function onFailed( xhr ) {
 				// console.log( 'An error happened' );
 				// progressBox.style.visibility = "hidden";
-				progressJs("#loadBox").end();
-			}
-
-			function setProgress(value) {
-				console.log("started");
-
-			  if (width <= 100) {
-			    width = value;
-			    console.log("val: " + value);
-			    progressLevel.style.width = width + '%';
-			    progressLabel.innerHTML = width * 1  + '%';
-			  }
+				progressJs().end();
 			}
 
 			function showImage() {
