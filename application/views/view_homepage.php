@@ -47,6 +47,8 @@
     <h6>Tiny Drops of Memory in Panoramic Frame</h6>
     <p>There's always a background to every image taken, always a sidestory. I've tried to capture those special moments as a whole, so that I can always cherish those just as they were.</p>
   </div>
+  
+  
   <!-- /.container -->
 
 
