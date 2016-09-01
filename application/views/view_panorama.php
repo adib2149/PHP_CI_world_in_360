@@ -78,7 +78,7 @@
 				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
 				camera.target = new THREE.Vector3( 0, 0, 0 );
 
-				progressJs("#container").setOptions({overlayMode: true, theme: 'blueOverlayRadiusWithPercentBar'}).start();
+				progressJs().start();
 
 				scene = new THREE.Scene();
 
