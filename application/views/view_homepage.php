@@ -98,7 +98,7 @@
 
             <br>
 
-            <p class="pull-right"> Copyright © <a href='https://riddhimanadib.wordpress.com/about/' target='_blank'>Riddhiman Adib</a> 2016. All right reserved. </p>
+            <p class="pull-right"> Copyright © <a href='https://medium.com/my-online-cafe/about-myself-5d6946a05c2d#.wt7ywqe9t' target='_blank'>Riddhiman Adib</a> 2016. All right reserved. </p>
         </div>
   </div>
 
